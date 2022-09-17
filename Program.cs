@@ -103,6 +103,37 @@ Console.WriteLine("");
 
 
 
+//BONUS
+
+Console.WriteLine("Quanti numeri vuoi inserire?");
+int N = Convert.ToInt32(Console.ReadLine());
+int[] arrayUtente = new int[N];
+for (int i = 0; i < N - 1; i++)
+{
+	arrayUtente[i] = Convert.ToInt32(Console.ReadLine());
+}
 
 
 
+
+Console.WriteLine("Stampare l’array di numeri fornito a video");
+StampaArray(arrayUtente);
+Console.WriteLine("");
+Console.WriteLine("Stampare l’array di numeri fornito a video, dove ogni numero è stato prima elevato al quadrato. " +
+    "(Verificare che l’array originale non sia stato modificato quindi ristampare nuovamente l’array originale e verificare che sia rimasto [2, 6, 7, 5, 3, 9])");
+Console.WriteLine("");
+Console.WriteLine("Array al quadrato");
+
+StampaArray(ElevaArrayAlQuadrato(arrayUtente));
+Console.WriteLine("");
+
+Console.WriteLine("Array originale");
+StampaArray(arrayUtente);
+
+Console.WriteLine("");
+Console.WriteLine("Stampare la somma di tutti i numeri");
+Console.WriteLine(sommaElementiArray(arrayUtente));
+Console.WriteLine("");
+Console.WriteLine("Stampare la somma di tutti i numeri elevati al quadrati");
+Console.WriteLine(sommaElementiArray(ElevaArrayAlQuadrato(arrayUtente)));
+Console.WriteLine("");
